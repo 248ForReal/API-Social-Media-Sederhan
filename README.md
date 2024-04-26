@@ -32,12 +32,27 @@ Social Media API adalah proyek Laravel yang menyediakan layanan API untuk aplika
 
 ## Penggunaan
 
+### Pengguna (Users)
+
 1. Registrasi pengguna menggunakan endpoint `/register`.
 2. Masuk ke akun menggunakan endpoint `/login`.
 3. Dapatkan profil pengguna dengan endpoint `/users/me`.
-4. Buat postingan baru dengan endpoint `/posts`.
-5. Suka atau tidak suka postingan menggunakan endpoint `/posts/{post_id}/like`.
-6. Tambahkan komentar ke postingan menggunakan endpoint `/posts/{post_id}/comment`.
+4. Perbarui informasi profil pengguna dengan endpoint `/users/{user_id}`.
+5. Ikuti atau berhenti mengikuti pengguna lain dengan endpoint `/users/{user_id}/follow`.
+6. Dapatkan daftar pengikut dengan endpoint `/users/{user_id}/followers`.
+7. Dapatkan daftar yang diikuti oleh pengguna dengan endpoint `/users/{user_id}/following`.
+8. Dapatkan postingan pengguna dengan endpoint `/users/{user_id}/posts`.
+
+### Postingan (Posts)
+
+1. Buat postingan baru dengan endpoint `/posts`.
+2. Lihat semua postingan dengan endpoint `/posts`.
+3. Lihat postingan berdasarkan ID dengan endpoint `/posts/{post_id}`.
+4. Edit postingan dengan endpoint `/posts/{post_id}`.
+5. Hapus postingan dengan endpoint `/posts/{post_id}`.
+6. Suka atau tidak suka postingan menggunakan endpoint `/posts/{post_id}/like`.
+7. Tambahkan komentar ke postingan menggunakan endpoint `/posts/{post_id}/comment`.
+8. Hapus komentar dengan endpoint `/posts/comment/{comment_id}`.
 
 ## Kontribusi
 
