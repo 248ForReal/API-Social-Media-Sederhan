@@ -1,66 +1,63 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Social Media API
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Social Media API adalah proyek Laravel yang menyediakan layanan API untuk aplikasi media sosial sederhana. API ini memungkinkan pengguna untuk mendaftar, masuk, membuat postingan, menyukai postingan, dan berinteraksi dengan pengguna lainnya.
 
-## About Laravel
+## Fitur
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- **Otentikasi Pengguna:** Registrasi, masuk, dan keluar.
+- **Manajemen Profil Pengguna:** Lihat profil, perbarui informasi, dan unggah foto profil.
+- **Postingan:** Buat, lihat, edit, dan hapus postingan.
+- **Interaksi:** Suka atau tidak suka postingan, tambahkan komentar ke postingan.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Persyaratan
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- PHP >= 7.4
+- Composer
+- Laravel 10.x
+- Laravel Passport
+- MySQL atau database lainnya
+- Postman atau alat serupa untuk menguji API
 
-## Learning Laravel
+## Instalasi
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+1. Clone repositori ke mesin lokal Anda.
+2. Buka terminal dan pindah ke direktori proyek.
+3. Jalankan `composer install` untuk menginstal dependensi PHP.
+4. Salin `.env.example` menjadi `.env` dan sesuaikan konfigurasi database.
+5. Jalankan `php artisan key:generate` untuk menghasilkan kunci aplikasi.
+6. Jalankan `php artisan migrate` untuk menjalankan migrasi basis data.
+7. Jalankan `php artisan passport:install` untuk menginstal Passport.
+8. Jalankan `php artisan storage:link ` untuk menginstal Passport.
+9. Jalankan `php artisan serve` untuk menjalankan server pengembangan.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Penggunaan
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Pengguna (Users)
 
-## Laravel Sponsors
+1. Registrasi pengguna menggunakan endpoint `/register`.
+2. Masuk ke akun menggunakan endpoint `/login`.
+3. Dapatkan profil pengguna dengan endpoint `/users/me`.
+4. Perbarui informasi profil pengguna dengan endpoint `/users/{user_id}`.
+5. Ikuti atau berhenti mengikuti pengguna lain dengan endpoint `/users/{user_id}/follow`.
+6. Dapatkan daftar pengikut dengan endpoint `/users/{user_id}/followers`.
+7. Dapatkan daftar yang diikuti oleh pengguna dengan endpoint `/users/{user_id}/following`.
+8. Dapatkan postingan pengguna dengan endpoint `/users/{user_id}/posts`.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+### Postingan (Posts)
 
-### Premium Partners
+1. Buat postingan baru dengan endpoint `/posts`.
+2. Lihat semua postingan dengan endpoint `/posts`.
+3. Lihat postingan berdasarkan ID dengan endpoint `/posts/{post_id}`.
+4. Edit postingan dengan endpoint `/posts/{post_id}`.
+5. Hapus postingan dengan endpoint `/posts/{post_id}`.
+6. Suka atau tidak suka postingan menggunakan endpoint `/posts/{post_id}/like`.
+7. Tambahkan komentar ke postingan menggunakan endpoint `/posts/{post_id}/comment`.
+8. Hapus komentar dengan endpoint `/posts/comment/{comment_id}`.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+## Kontribusi
 
-## Contributing
+Kami mengundang kontribusi dari komunitas! Silakan laporkan bug, ajukan fitur baru, atau kirimkan pull request. Lihat [CONTRIBUTING.md](CONTRIBUTING.md) untuk panduan kontribusi.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Lisensi
 
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Proyek ini dilisensikan di bawah [MIT License](LICENSE).
