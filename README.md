@@ -1,45 +1,37 @@
-# API-Social-Media-Sederhana
+Social Media API Sederhana
 
-Nama Proyek Anda
-Deskripsi singkat tentang proyek Anda.
-
-Daftar Isi
-Deskripsi
-Fitur
-Persyaratan
-Instalasi
-Penggunaan
-Kontribusi
-Lisensi
-Deskripsi
-Deskripsi lebih rinci tentang proyek Anda. Jelaskan tujuan proyek, teknologi yang digunakan, dan kegunaan umum dari proyek tersebut.
+Social Media API adalah proyek Laravel yang menyediakan layanan API untuk aplikasi media sosial sederhana. API ini memungkinkan pengguna untuk mendaftar, masuk, membuat postingan, menyukai postingan, dan berinteraksi dengan pengguna lainnya.
 
 Fitur
-Daftar fitur utama proyek Anda di sini. Pisahkan setiap fitur dengan bullet points.
-
-Fitur 1: Deskripsi fitur 1.
-Fitur 2: Deskripsi fitur 2.
-...
+Otentikasi pengguna: Registrasi, masuk, dan keluar.
+Manajemen profil pengguna: Lihat profil, perbarui informasi, dan unggah foto profil.
+Postingan: Buat, lihat, edit, dan hapus postingan.
+Interaksi: Suka atau tidak suka postingan, tambahkan komentar ke postingan.
 Persyaratan
-Tuliskan persyaratan apa pun yang diperlukan untuk menjalankan proyek Anda di sini. Ini bisa mencakup perangkat lunak yang harus diinstal, lingkungan pengembangan, atau konfigurasi khusus.
-
+PHP >= 7.4
+Composer
+Laravel 10.x
+Laravel Passport
+MySQL atau database lainnya
+Postman atau alat serupa untuk menguji API
 Instalasi
-Langkah-langkah untuk menginstal dan menjalankan proyek Anda. Pastikan untuk menyertakan prasyarat dan proses instalasi dengan jelas.
-
-Langkah 1: Deskripsi langkah 1.
-Langkah 2: Deskripsi langkah 2.
-...
+Clone repositori ke mesin lokal Anda.
+Buka terminal dan pindah ke direktori proyek.
+Jalankan composer install untuk menginstal dependensi PHP.
+Salin .env.example menjadi .env dan sesuaikan konfigurasi database.
+Jalankan php artisan key:generate untuk menghasilkan kunci aplikasi.
+Jalankan php artisan migrate untuk menjalankan migrasi basis data.
+Jalankan php artisan passport:install untuk menginstal Passport.
+Jalankan php artisan serve untuk menjalankan server pengembangan.
 Penggunaan
-Instruksi tentang cara menggunakan proyek Anda. Berikan contoh konkret tentang bagaimana menjalankan perintah, berinteraksi dengan antarmuka, atau menggunakan fitur-fitur yang tersedia.
-
-bash
-Copy code
-# Contoh penggunaan perintah atau skrip
-$ perintah-contoh argumen
+Registrasi pengguna menggunakan endpoint /register.
+Masuk ke akun menggunakan endpoint /login.
+Dapatkan profil pengguna dengan endpoint /users/me.
+Buat postingan baru dengan endpoint /posts.
+Suka atau tidak suka postingan menggunakan endpoint /posts/{post_id}/like.
+Tambahkan komentar ke postingan menggunakan endpoint /posts/{post_id}/comment.
 Kontribusi
-Jelaskan bagaimana kontributor dapat berkontribusi pada proyek Anda. Ini bisa berupa panduan tentang cara melaporkan bug, mengajukan fitur baru, atau membuat pull request.
+Kami mengundang kontribusi dari komunitas! Silakan laporkan bug, ajukan fitur baru, atau kirimkan pull request. Lihat CONTRIBUTING.md untuk panduan kontribusi.
 
 Lisensi
-Tentukan lisensi yang Anda gunakan untuk proyek Anda. Sertakan teks lengkap dari lisensi atau tautan ke berkas LICENSE jika sudah ada.
-
-Pastikan untuk mengganti "Nama Proyek Anda", deskripsi, fitur, persyaratan, dan bagian lainnya sesuai dengan proyek Anda. Selain itu, Anda dapat menambahkan informasi tambahan atau bagian yang dianggap relevan untuk proyek Anda.
+Proyek ini dilisensikan di bawah MIT License.
