@@ -49,10 +49,9 @@ Social Media API adalah proyek Laravel yang menyediakan layanan API untuk aplika
 2. Lihat semua postingan dengan endpoint `/posts`.
 3. Lihat postingan berdasarkan ID dengan endpoint `/posts/{post_id}`.
 4. Edit postingan dengan endpoint `/posts/{post_id}`.
-5. Hapus postingan dengan endpoint `/posts/{post_id}`.
-6. Suka atau tidak suka postingan menggunakan endpoint `/posts/{post_id}/like`.
-7. Tambahkan komentar ke postingan menggunakan endpoint `/posts/{post_id}/comment`.
-8. Hapus komentar dengan endpoint `/posts/comment/{comment_id}`.
+5. Suka atau tidak suka postingan menggunakan endpoint `/posts/{post_id}/like`.
+6. Tambahkan komentar ke postingan menggunakan endpoint `/posts/{post_id}/comment`.
+7. Hapus komentar dengan endpoint `/posts/comment/{comment_id}`.
 
 ## Kontribusi
 
