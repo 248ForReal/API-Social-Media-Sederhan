@@ -1,5 +1,4 @@
-Social Media API Sederhana
-
+Social Media API
 Social Media API adalah proyek Laravel yang menyediakan layanan API untuk aplikasi media sosial sederhana. API ini memungkinkan pengguna untuk mendaftar, masuk, membuat postingan, menyukai postingan, dan berinteraksi dengan pengguna lainnya.
 
 Fitur
